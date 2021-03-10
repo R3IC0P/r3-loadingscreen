@@ -9,7 +9,7 @@
             <source src="loading.mp4" type="video/mp4">
          </video>
         <div class="logo">
-            <!-- Replace name & RP with your name -->
+            <!-- Replace "name" & "RP" with your name -->
             <i id="name">name</i><i id="rp">RP</i>  
         </div>
         <div class="player">
@@ -22,7 +22,9 @@
     </div>
 </body>
 <script type="text/javascript">
-    
+
+    // to add more songs ..."Song3.mp3", "Song4.mp3", "Song5.mp3"...
+    // DON'T FOGET add to "__resource.lua"
     var songs = ["Song1.mp3","Song2.mp3","Song3.mp3"];
         
     var song = new Audio();
@@ -50,7 +52,8 @@
     }       
     
     function next(){
-            
+        // !!! IMPORTANT !!!    
+        // if(currentSong > 2){     -    "2" for 3 songs, "3" for 4 songs etc.
         currentSong++;
         if(currentSong > 2){
             currentSong = 0;
@@ -62,7 +65,8 @@
     }
     
     function pre(){
-            
+        // !!! IMPORTANT !!!    
+        // currnetSong = 2;     -    "2" for 3 songs, "3" for 4 songs etc.
         currentSong--;
         if(currentSong < 0){
             currentSong = 2;
@@ -75,15 +79,16 @@
 
     window.addEventListener('keydown', function(event) {
         switch (event.keyCode) {
-            case 37:
+            // javascript keycodes: https://keycode.info/
+            case 37:  // default 37 - left arrow
                 pre();
             break;
 
-            case 39:
+            case 39: // default 39 - right arrow
                 next();
             break;
         
-            case 32:
+            case 32: // default 32 - space
                 playOrPauseSong();
             break;
         }

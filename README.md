@@ -5,7 +5,7 @@ Logo is TEXT not picture!
 Picture version is comming :P 
 
 # Controls
-Play&Pause - space
+Play & Pause - space
 Next - right arrow
 Previous - left arrow
 
@@ -32,5 +32,5 @@ ensure r3-loadingscreen
 
 # Sources
 - [video](https://www.youtube.com/watch?v=PWeDrQLVBPw)
-# _________
-- [GitHuB](https://github.com/R3IC0P)
+# _____________________
+- [GitHub](https://github.com/R3IC0P)

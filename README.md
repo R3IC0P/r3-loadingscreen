@@ -1,8 +1,6 @@
 # r3 loadingscreen
 
-- Fivem loadingscreen with audio player & video background.
-- Logo is TEXT not picture!
-- Picture version is comming :P 
+Fivem loadingscreen with audio player & video background. Logo is TEXT not picture! Picture version is comming :P 
 
 # Controls
 - Play & Pause - space
@@ -10,9 +8,10 @@
 - Previous - left arrow
 
 # Editing
-You can replace files ("SongX.mp3" & "loading.mp4") at same name.
-Change "name" in (`index.html`) at line 13.
-Change volume in (`index.html`) at line 35.
+- You can replace files ("SongX.mp3" & "loading.mp4") at same name.
+- Change "name" in (`index.html`) at line 13.
+- Change volume in (`index.html`) at line 35.
+- Change color in (`style.css`) at line 32 & 35.
 
 ### Installing
 1. Download the files from thr repository

@@ -1,0 +1,92 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-1.10.2.min.js"></script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" oncopy="return false">
+    <div class="container">    
+        <video autoplay loop muted id="bg-video">
+            <source src="loading.mp4" type="video/mp4">
+         </video>
+        <div class="logo">
+            <!-- Replace name & RP with your name -->
+            <i id="iskra">name</i><i id="rp">RP</i>  
+        </div>
+        <div class="player">
+            <div id="buttons">
+                <button id="pre" onclick="pre()" onkeypress="pre()"><img src="Pre.png" height="90%" width="90%"/></button>
+                <button id="play" onclick="playOrPauseSong()" onkeypress="playOrPauseSong()"><img src="Pause.png"/></button>
+                <button id="next" onclick="next()" onkeypress="next()"><img src="Next.png" height="90%" width="90%"/></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    
+    var songs = ["Song1.mp3","Song2.mp3","Song3.mp3"];
+        
+    var song = new Audio();
+    var currentSong = 0;
+        
+    window.onload = playSong;
+        
+    function playSong(){
+            
+        song.src = songs[currentSong];
+        song.volume = 0.4;      // min - max | 0.0 - 1.0
+        song.play();
+    }
+        
+    function playOrPauseSong(){
+            
+        if(song.paused){
+            song.play();
+            $("#play img").attr("src","Pause.png");
+        }
+        else{
+            song.pause();
+            $("#play img").attr("src","Play.png");
+        }
+    }       
+    
+    function next(){
+            
+        currentSong++;
+        if(currentSong > 2){
+            currentSong = 0;
+        }
+        playSong();
+        $("#play img").attr("src","Pause.png");
+        $("#image img").attr("src",poster[currentSong]);
+        $("#bg img").attr("src",poster[currentSong]);
+    }
+    
+    function pre(){
+            
+        currentSong--;
+        if(currentSong < 0){
+            currentSong = 2;
+        }
+        playSong();
+        $("#play img").attr("src","Pause.png");
+        $("#image img").attr("src",poster[currentSong]);
+        $("#bg img").attr("src",poster[currentSong]);
+    }
+
+    window.addEventListener('keydown', function(event) {
+        switch (event.keyCode) {
+            case 37:
+                pre();
+            break;
+
+            case 39:
+                next();
+            break;
+        
+            case 32:
+                playOrPauseSong();
+            break;
+        }
+    }, false);
+</script>
+</html>

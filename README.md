@@ -31,8 +31,6 @@ ensure r3-loadingscreen
 ![Preview](https://files.catbox.moe/vay8lh.png)
 
 # Sources
-- [video:](https://www.youtube.com/watch?v=PWeDrQLVBPw)
-
-
+- [video](https://www.youtube.com/watch?v=PWeDrQLVBPw)
 # _________
-- [GitHuB:](https://github.com/R3IC0P)
+- [GitHuB](https://github.com/R3IC0P)

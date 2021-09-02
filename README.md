@@ -23,9 +23,7 @@ Before editing make a copy!
 4. Add "ensure r3-loadingscreen" to your server.cfg
 
 ```
-
 ensure r3-loadingscreen
-
 ```
 
 ### Screenshots
